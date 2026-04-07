@@ -402,6 +402,8 @@ class TextExtractor implements TextExtractorInterface
             }
         );
 
+        $returnedContent = preg_replace('~<script\b[^>]*>.*?</script>~is', '', $returnedContent);
+
         return $returnedContent;
     }
 }

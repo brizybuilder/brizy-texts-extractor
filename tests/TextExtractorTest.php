@@ -299,4 +299,19 @@ class TextExtractorTest extends TestCase
 
         $this->assertGreaterThan(150, $result, 'It should return the correct count of texts');
     }
+    public function testExtractScriptTagTexts()
+    {
+        $extractor = new TextExtractor();
+        $result = $extractor->extractFromContent(file_get_contents('/opt/project/tests/data/pages/case14.html'));
+
+        foreach ($result as $text) {
+             $this->assertFalse(strpos($text,'var locations'), 'It should not contain texts from script tags');
+             $this->assertFalse(strpos($text,'function initMap'), 'It should not contain texts from script tags');
+             $this->assertFalse(strpos($text,'infowindow'), 'It should not contain texts from script tags');
+             $this->assertFalse(strpos($text,'addListener'), 'It should not contain texts from script tags');
+             $this->assertFalse(strpos($text,'google.maps.Map'), 'It should not contain texts from script tags');
+             $this->assertFalse(strpos($text,'return'), 'It should not contain texts from script tags');
+        }
+
+    }
 }
