@@ -1,5 +1,5 @@
 {
-  "name": "bagrinsergiu/brizy-texts-extractor",
+  "name": "brizybuilder/brizy-texts-extractor",
   "description": "Extract and replace texts from html documents",
   "type": "library",
   "autoload": {
@@ -15,7 +15,7 @@
   "require": {
     "php": ">=7.2",
     "ext-dom": "*",
-    "bagrinsergiu/content-placeholder": "~3.0"
+    "brizybuilder/content-placeholder": "~3.0"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.19",
@@ -25,7 +25,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/bagrinsergiu/brizy-content-placeholder.git"
+      "url": "https://github.com/brizybuilder/brizy-content-placeholder.git"
     }
   ]
 }
