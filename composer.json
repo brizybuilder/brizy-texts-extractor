@@ -1,5 +1,5 @@
 {
-  "name": "bagrinsergiu/brizy-texts-extractor",
+  "name": "brizybuilder/brizy-texts-extractor",
   "description": "Extract and replace texts from html documents",
   "type": "library",
   "autoload": {
